@@ -1,0 +1,13 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Data generated at runtime
+nest_readings.csv
+
+# Debug screenshots
+debug_*.png
+
+# User-specific config (kept local)
+# config.json

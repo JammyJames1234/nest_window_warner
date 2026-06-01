@@ -1,0 +1,25 @@
+{
+  "window_title": "Upstairs - Nest - Google Chrome",
+  "polling_interval_seconds": 60,
+  "alert_margin": 0.5,
+  "beep_enabled": true,
+  "beep_duration_ms": 3000,
+  "beep_interval_sec": 0.5,
+  "indoor_roi": [
+    2677,
+    1054,
+    397,
+    235
+  ],
+  "outdoor_roi": [
+    3122,
+    1671,
+    238,
+    140
+  ],
+  "csv_log_path": "nest_readings.csv",
+  "capture_method": "print_window",
+  "debug_capture": false,
+  "restore_before_capture": true,
+  "maximize_on_restore": false
+}
