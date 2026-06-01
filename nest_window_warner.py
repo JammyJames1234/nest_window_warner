@@ -1184,6 +1184,28 @@ def monitor_loop(cfg):
     log.info("Press Ctrl+C to quit (alarm beeps until temps change)")
     print()
 
+    # Startup sanity check: make sure the target window exists
+    test_window = find_chrome_window(title)
+    if test_window is None:
+        print()
+        print("=" * 70)
+        print("  ERROR: No Chrome window matching '%s' was found." % title)
+        print()
+        print("  To get started:")
+        print("    1. Open Chrome and go to home.nest.com")
+        print("    2. Log in to your Nest account")
+        print("    3. Keep the window visible (not minimised)")
+        print("    4. Run this script again")
+        print()
+        print("  Or run calibration to pick the window interactively:")
+        print("    python nest_window_warner.py --calibrate")
+        print()
+        print("  To see all visible window titles:")
+        print("    python nest_window_warner.py --list-windows")
+        print("=" * 70)
+        print()
+        sys.exit(1)
+
     while True:
         ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
